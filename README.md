@@ -1,2 +1,38 @@
-# Fukuro
-Site da consultoria Fukuro
+# Fukurō
+
+Site institucional da Fukurō — consultoria em eficiência digital (automação, KPIs e mapeamento de processos).
+
+🔗 **Live:** [fukuroconsultoria.com.br](https://fukuroconsultoria.com.br)
+
+## Sobre
+
+Landing page de página única (one-pager) apresentando os serviços da consultoria: diagnóstico de maturidade digital, automação de processos, inteligência de dados e workshops/mentorias. Construída em HTML/CSS puro, sem frameworks ou build step.
+
+## Estrutura
+
+```
+araujocostamkt.github.io/
+├── index.html              # Landing page da Fukurō (site principal)
+├── atividade.html          # Página avulsa de apoio didático (download de PDFs de matemática)
+├── lista_media_mediana.pdf
+├── provao_matematica.pdf
+└── CNAME                   # Domínio customizado: fukuroconsultoria.com.br
+```
+
+> Nota: `atividade.html` e os PDFs associados não fazem parte do site da Fukurō — são materiais de apoio hospedados no mesmo domínio do GitHub Pages.
+
+## Deploy
+
+Hospedado via **GitHub Pages**, com domínio customizado configurado em `CNAME`. Qualquer push para a branch padrão é publicado automaticamente — não há passo de build.
+
+## Editar localmente
+
+Como é HTML estático, basta abrir `index.html` diretamente no navegador ou servir a pasta com qualquer servidor estático, por exemplo:
+
+```bash
+python3 -m http.server 8000
+```
+
+## Observação sobre o formulário de contato
+
+O formulário na seção `#contato` (`index.html`) usa `action="#"`, ou seja, ainda não envia os dados para nenhum backend ou serviço de e-mail. Para capturar leads é necessário integrá-lo a um serviço como Formspree, um endpoint próprio, ou `mailto:`.
